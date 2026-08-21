@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bethel"
+version = "0.2.0"
+description = "Sample size and allocation according to Bethel's procedure for multivariate stratified surveys."
+readme = "README.md"
+license = { text = "GPL-2.0-or-later" }
+authors = [
+  { name = "Michele De Meo", email = "micheledemeo@gmail.com" },
+]
+requires-python = ">=3.9"
+dependencies = [
+  "numpy>=1.20",
+  "pandas>=1.3",
+]
+keywords = ["survey", "sampling", "bethel", "stratified", "sample-size"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Information Analysis",
+]
+
+[project.urls]
+Homepage = "https://cran.r-project.org/package=bethel"
+Documentation = "https://cran.r-project.org/web/packages/bethel/bethel.pdf"
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+notebook = ["matplotlib>=3.5", "ipython>=8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+bethel = ["data/*.csv"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
