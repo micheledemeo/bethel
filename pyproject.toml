@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "bethel"
-version = "0.2.0"
+version = "0.2.1"
 description = "Sample size and allocation according to Bethel's procedure for multivariate stratified surveys."
 readme = "README.md"
 license = "GPL-2.0-or-later"
