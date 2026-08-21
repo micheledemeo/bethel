@@ -10,6 +10,14 @@ on several target estimates.
 
 ## Install
 
+From PyPI (after release):
+
+```bash
+pip install bethel
+```
+
+From source:
+
 ```bash
 pip install -e .
 ```

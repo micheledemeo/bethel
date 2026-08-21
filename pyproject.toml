@@ -7,7 +7,8 @@ name = "bethel"
 version = "0.2.0"
 description = "Sample size and allocation according to Bethel's procedure for multivariate stratified surveys."
 readme = "README.md"
-license = { text = "GPL-2.0-or-later" }
+license = "GPL-2.0-or-later"
+license-files = ["LICENSE"]
 authors = [
   { name = "Michele De Meo", email = "micheledemeo@gmail.com" },
 ]
@@ -20,17 +21,23 @@ keywords = ["survey", "sampling", "bethel", "stratified", "sample-size"]
 classifiers = [
   "Development Status :: 4 - Beta",
   "Intended Audience :: Science/Research",
-  "License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)",
   "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
   "Topic :: Scientific/Engineering :: Information Analysis",
 ]
 
 [project.urls]
-Homepage = "https://cran.r-project.org/package=bethel"
-Documentation = "https://cran.r-project.org/web/packages/bethel/bethel.pdf"
+Homepage = "https://github.com/micheledemeo/bethel"
+Documentation = "https://github.com/micheledemeo/bethel/blob/main/notebooks/bethel.ipynb"
+Repository = "https://github.com/micheledemeo/bethel"
+Issues = "https://github.com/micheledemeo/bethel/issues"
+"R package (CRAN)" = "https://cran.r-project.org/package=bethel"
 
 [project.optional-dependencies]
-dev = ["pytest>=7"]
+dev = ["pytest>=7", "build>=1.0", "twine>=5"]
 notebook = ["matplotlib>=3.5", "ipython>=8"]
 
 [tool.setuptools.packages.find]
