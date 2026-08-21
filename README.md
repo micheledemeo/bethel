@@ -1,5 +1,10 @@
 # bethel
 
+[![PyPI version](https://img.shields.io/pypi/v/bethel.svg)](https://pypi.org/project/bethel/)
+[![Python](https://img.shields.io/pypi/pyversions/bethel.svg)](https://pypi.org/project/bethel/)
+[![License: GPL v2+](https://img.shields.io/badge/License-GPL%20v2%2B-blue.svg)](https://www.gnu.org/licenses/gpl-2.0.html)
+[![CI](https://github.com/micheledemeo/bethel/actions/workflows/ci.yml/badge.svg)](https://github.com/micheledemeo/bethel/actions/workflows/ci.yml)
+
 Python port of the CRAN R package
 [bethel](https://cran.r-project.org/package=bethel): sample size and
 allocation according to **Bethel's procedure** (1989) for multivariate
@@ -8,9 +13,16 @@ stratified surveys.
 Minimizes survey costs under coefficient-of-variation (CV) constraints
 on several target estimates.
 
-## Install
+## Links
 
-From PyPI (after release):
+| Resource | URL |
+|---|---|
+| PyPI | https://pypi.org/project/bethel/ |
+| GitHub | https://github.com/micheledemeo/bethel |
+| R package (CRAN) | https://cran.r-project.org/package=bethel |
+| Tutorial notebook | [`notebooks/bethel.ipynb`](notebooks/bethel.ipynb) |
+
+## Install
 
 ```bash
 pip install bethel
@@ -19,6 +31,8 @@ pip install bethel
 From source:
 
 ```bash
+git clone https://github.com/micheledemeo/bethel.git
+cd bethel
 pip install -e .
 ```
 
@@ -79,6 +93,29 @@ One row in `targets` is required for each variance column in `strata`.
 - `bethel_sample` — continuous Bethel solution (ceiling)
 - `adjusted_sample` — after minimum constraints and cap at `N`
 
+## Citation
+
+If you use this software, please cite the method and the package:
+
+```bibtex
+@article{bethel1989,
+  author  = {Bethel, James W.},
+  title   = {Sample Allocation in Multivariate Surveys},
+  journal = {Survey Methodology},
+  volume  = {15},
+  pages   = {47--57},
+  year    = {1989}
+}
+
+@software{bethel_py,
+  author  = {De Meo, Michele},
+  title   = {bethel: Bethel's algorithm for multivariate stratified surveys (Python)},
+  year    = {2026},
+  url     = {https://pypi.org/project/bethel/},
+  note    = {Python port of the CRAN R package bethel}
+}
+```
+
 ## References
 
 - Bethel, J.W. (1989). Sample Allocation in Multivariate Surveys.
@@ -89,6 +126,9 @@ One row in `targets` is required for each variance column in `strata`.
 ## Author
 
 Michele De Meo \<micheledemeo@gmail.com\>
+
+Author of the original R package on
+[CRAN](https://cran.r-project.org/package=bethel).
 
 ## License
 
